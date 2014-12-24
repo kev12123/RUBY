@@ -8,8 +8,8 @@ end
 
 stopwords = %w{the a by on for of are with just but and to the my I has some in}
 
-total_characters = text.length
-total_characters_nospaces = text.gsub(/\s+/,'').length
+total_char = text.length
+total_char_nospaces = text.gsub(/\s+/,'').length
 word_count =text.split.length
 sentence_count = text.split(/\.|\?|!/).length
 total_paragraphs =text.split(/\n\n/).length
@@ -18,8 +18,8 @@ keywords = words.select {|word| !stopwords.include?(word)}
 
 
 puts "#{line_count} lines"
-puts "#{total_characters} characters"
-puts "#{total_characters_nospaces} characters (excluding spaces)"
+puts "#{total_char} characters"
+puts "#{total_char_nospaces} characters (excluding spaces)"
 puts "#{word_count} words" 
 puts "#{sentence_count} sentences"
 puts "#{total_paragraphs} paragraphs"
@@ -41,7 +41,7 @@ if grade > "90" && grade < "100"
         
       else
         
-        puts "Your text is shit , you're definetly getting an F"
+        puts "F"
         
       
       end
